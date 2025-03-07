@@ -1,0 +1,64 @@
+/* NumberGuessGame.css */
+
+.game-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+    text-align: center;
+  }
+  
+  .feedback-text {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .hint-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic; /* 斜体にして強調したい場合 */
+    line-height: 1.4;
+  }
+  
+  .game-container input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: calc(100% - 22px);
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .game-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .game-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .game-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .game-container p {
+    margin: 0.5em 0;
+    color: #444;
+  }
