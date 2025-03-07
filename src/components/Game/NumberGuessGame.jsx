@@ -36,14 +36,16 @@ function NumberGuessGame() {
     if (gameOver) return; // 入力受付停止
 
     // Convert full-width input to half-width
-    const convertedGuess = toHalfWidth(guess);
-    if (!convertedGuess || isNaN(convertedGuess)) {
+  
+
+    console.log(`Converted guess: ${guess}`);
+    if (!guess || isNaN(guess)) {
       setMessage("有効な数字を入力してください。");
       setHintMessage("");
       return;
     }
 
-    const num = parseInt(convertedGuess, 10);
+    const num = parseInt(guess, 10);
     const newAttempts = attempts + 1;
     setAttempts(newAttempts);
 
@@ -102,9 +104,9 @@ function NumberGuessGame() {
       {hintMessage && <p className="hint-text">💡ヒント: {hintMessage}</p>}
 
       <input
-        type="number"
+        type="text"
         value={guess}
-        onChange={(e) => setGuess(e.target.value)}
+        onChange={(e) => setGuess(toHalfWidth(e.target.value))}
         onKeyDown={handleKeyDown}
         ref={inputRef}
         placeholder="数字を入力"

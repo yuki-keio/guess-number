@@ -27,7 +27,7 @@
     line-height: 1.4;
   }
   
-  .game-container input[type="number"] {
+  .game-container input[type="text"] {
     padding: 10px;
     font-size: 1rem;
     width: calc(100% - 22px);
